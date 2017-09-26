@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var htmlRoutes = require('./routing/htmlRoutes');
 var apiRoutes = require('./routing/apiRoutes');
+var fs = require("fs");
 
 // Sets up the Express App
 // =============================================================
@@ -24,7 +25,6 @@ apiRoutes(app, path);
 
 
 // Starts the server to begin listening
-// =============================================================
 app.listen(PORT, function() {
     console.log('App listening on PORT ' + PORT);
   });
