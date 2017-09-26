@@ -1,8 +1,10 @@
 // Dependencies
 // =============================================================
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
+var htmlRoutes = require('./routing/htmlRoutes');
+var apiRoutes = require('./routing/apiRoutes');
 
 // Sets up the Express App
 // =============================================================
@@ -13,7 +15,13 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+
+// Runs the Routes
+htmlRoutes(app, path);
+apiRoutes(app, path);
+
+
 
 // Starts the server to begin listening
 // =============================================================
