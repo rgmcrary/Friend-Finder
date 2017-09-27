@@ -20,7 +20,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // Runs the Routes
 htmlRoutes(app, path);
-apiRoutes(app, path);
+apiRoutes(app, path, fs);
 
 
 
