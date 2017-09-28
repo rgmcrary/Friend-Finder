@@ -1,4 +1,8 @@
 module.exports = function(app, path, fs) {
+app.get('/api/friends', function(req, res) {
+  res.sendFile(path.join(__dirname, '../data/friends.js'));
+});
+
   // Create New User Input and processes it - takes in JSON input
   app.post('/api/friends', function(req, res) {
     // console.log(req.body);
