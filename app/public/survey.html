@@ -18,8 +18,8 @@
         crossorigin="anonymous"></script>
 
     <!-- Validation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -28,7 +28,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.jquery.min.js"></script>
 
+    <style>
+        .error {
+            color: #ff0000;
+            font-size: 16px;
+        }
 
+        label.error {
+            display: none
+        }
+    </style>
 
 </head>
 
@@ -40,22 +49,23 @@
         <h3><strong>About You</strong></h3>
 
         <!-- Questionnaire -->
-        <form id="questionnaire">
+        <form id="questionnaire" action="">
             <h4>Name (Required)</h4>
-            <input type="text" name="name" id="name" class="form-control" required>
-            <div id="nameLabel" class="error"></div>
-            <h4>Link to Photo Image (required)</h4>
-            <input type="url" name="photo" id="photo" class="form-control" required>
+            <input type="text" name="username" id="username" class="form-control">
+            <h4>Link to Photo Image (Required)</h4>
+            <input type="url" name="photo" id="photo" class="form-control">
             <hr>
             <h3>Question 1</h3>
             <h4>You are more spontaneous than structured in your spare time.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio1" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio1" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio1" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio1" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio1" value="5">5 (Strongly Agree)</label>
+                <br/>
+                <label for="optradio1" class="error">Please make a selection.</label>
             </div>
 
             <br>
@@ -63,12 +73,14 @@
             <h3>Question 2</h3>
             <h4>You prefer going out to dinner rather than going to a party.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio2" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio2" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio2" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio2" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio2" value="5">5 (Strongly Agree)</label>
+                <br/>
+                <label for="optradio2" class="error">Please make a selection.</label>
             </div>
 
             <br>
@@ -76,12 +88,14 @@
             <h3>Question 3</h3>
             <h4>You find yourself to be calm in stressful situations.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio3" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio3" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio3" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio3" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio3" value="5">5 (Strongly Agree)</label>
+                <br/>
+                <label for="optradio3" class="error">Please make a selection.</label>
             </div>
 
             <br>
@@ -89,12 +103,14 @@
             <h3>Question 4</h3>
             <h4>You get frustrated easily.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio4" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio4" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio4" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio4" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio4" value="5">5 (Strongly Agree)</label>
+                <br/>
+                <label for="optradio4" class="error">Please make a selection.</label>
             </div>
 
             <br>
@@ -102,12 +118,14 @@
             <h3>Question 5</h3>
             <h4>You prefer to try new foods rather than keep with a plain menu selection.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio5" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio5" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio5" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio5" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio5" value="5">5 (Strongly Agree)</label>
+                <br/>
+                <label for="optradio5" class="error">Please make a selection.</label>
             </div>
 
             <br>
@@ -115,12 +133,14 @@
             <h3>Question 6</h3>
             Spending time in the mountains relaxes and rejuvenates you.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio6" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio6" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio6" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio6" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio6" value="5">5 (Strongly Agree)</label>
+                <br/>
+                <label for="optradio6" class="error">Please make a selection.</label>
             </div>
 
             <br>
@@ -128,12 +148,14 @@
             <h3>Question 7</h3>
             <h4>You prefer designer brands rather than practically priced items.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio7" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio7" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio7" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio7" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio7" value="5">5 (Strongly Agree)</label>
+                <br/>
+                <label for="optradio7" class="error">Please make a selection.</label>
             </div>
 
             <br>
@@ -141,12 +163,14 @@
             <h3>Question 8</h3>
             <h4>You prefer jeans and a t-shirt over a suit and tie.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio8" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio8" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio8" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio8" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio8" value="5">5 (Strongly Agree)</label>
+                <br/>
+                <label for="optradio8" class="error">Please make a selection.</label>
             </div>
 
             <br>
@@ -154,12 +178,14 @@
             <h3>Question 9</h3>
             <h4>You would rather have your feelings spared than be told the truth.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio9" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio9" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio9" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio9" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio9" value="5">5 (Strongly Agree)</label>
+                <br/>
+                <label for="optradio9" class="error">Please make a selection.</label>
             </div>
 
             <br>
@@ -167,83 +193,125 @@
             <h3>Question 10</h3>
             <h4>You are more of a morning person.</h4>
             <p>Select an Option</p>
-            <div class="container" required>
+            <div class="container" name="question">
                 <label class="radio-inline"><input type="radio" name="optradio10" value="1">1 (Strongly Disagree)</label>
                 <label class="radio-inline"><input type="radio" name="optradio10" value="2">2</label>
                 <label class="radio-inline"><input type="radio" name="optradio10" value="3">3</label>
                 <label class="radio-inline"><input type="radio" name="optradio10" value="4">4</label>
                 <label class="radio-inline"><input type="radio" name="optradio10" value="5">5 (Strongly Agree)</label>
-            </div>
+                <br/>
+                <label for="optradio10" class="error">Please make a selection.</label>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-lg btn-primary submitBtn">Submit</button>
         </form>
-        <br>
-        <br>
-        <button type="button" class="btn btn-lg btn-primary submitBtn">Submit</button>
-    </div>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal" role="dialog">
-        <div class="modal-dialog modal-sm">
+        </div>
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Meet Your New Friends!!</h4>
-                </div>
-                <div class="modal-body"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- Modal -->
+        <div id="myModal" class="modal" role="dialog">
+            <div class="modal-dialog modal-sm">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Meet Your New Best Friends!!</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <hr>
+        <hr>
 
-    <footer class="footer">
-        <div class="container">
-            <p><a href="/api/friends">API Friends List</a> |
-                <a href="https://github.com/rmcrary/FriendFinder">GitHub Repo</a>
-            </p>
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">API Friends List</a> |
+                    <a href="https://github.com/rmcrary/FriendFinder">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
-    <!-- JavaScript -->
-    <script>
-        ("#questionnaire").validate();
-        // Submit Button
-        $(".submitBtn").on("click", function () {
-            handleClick();
-        });
+        <!-- JavaScript -->
 
-        function handleClick() {
-            var datastring = $("#questionnaire").serialize();
-            $.ajax({
-                type: "POST",
-                url: "/api/friends",
-                data: datastring,
-                success: function (response) {
-                    if (response.length > 0) {
-                        for (var friend in response) {
-                            var friendHTML = "<div><h3>" + response[friend].name + "</h3><img src='" +
-                                response[friend].photo + "' width='200'></div>";
-                            $('.modal-body').append(friendHTML);
+        <!-- From Validation and submission -->
+        <script>
+            $(function () {
+                $("#questionnaire").validate({
+                    rules: {
+                        username: "required",
+                        photo: "required",
+                        optradio1: "required",
+                        optradio2: "required",
+                        optradio3: "required",
+                        optradio4: "required",
+                        optradio5: "required",
+                        optradio6: "required",
+                        optradio7: "required",
+                        optradio8: "required",
+                        optradio9: "required",
+                        optradio10: "required"
+                    },
+                    messages: {
+                        username: "Please enter your name.",
+                        photo: "Please enter a photo url.",
+                        optradio1: "Please make a selection.",
+                        optradio2: "Please make a selection.",
+                        optradio3: "Please make a selection.",
+                        optradio4: "Please make a selection.",
+                        optradio5: "Please make a selection.",
+                        optradio6: "Please make a selection.",
+                        optradio7: "Please make a selection.",
+                        optradio8: "Please make a selection.",
+                        optradio9: "Please make a selection.",
+                        optradio10: "Please make a selection."
+                    },
+                    submitHandler: function (form) {
+                        handleClick();
+                    }
+                });
+
+                // Reset Form with Modal close button
+                $('.modal').on('hidden.bs.modal', function(){
+                    $("#questionnaire")[0].reset();
+                        
+                        });
+            });
+
+
+            function handleClick() {
+                var datastring = $("#questionnaire").serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/api/friends",
+                    data: datastring,
+                    success: function (response) {
+                        if (response.length > 0) {
+                            for (var friend in response) {
+                                var friendHTML = "<div><h3>" + response[friend].name + "</h3><img src='" +
+                                    response[friend].photo + "' width='200'></div>";
+                                $('.modal-body').append(friendHTML);
+                            }
+                            $('#myModal').modal('show')
+                        } else {
+                            alert("Sorry, you have no friends.");
                         }
 
-
-                        $('#myModal').modal('show')
-                    } else {
-                        alert("Sorry, you have no friends.");
+                        
+                        
+                        console.log(response);
                     }
-
-                    console.log(response);
-                }
-            });
-        }
-    </script>
+                });
+            }
+        </script>
 </body>
 
 </html>
