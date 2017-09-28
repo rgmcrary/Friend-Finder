@@ -21,10 +21,10 @@ module.exports = function(app, path, fs) {
       'utf8'
     );
     friends = JSON.parse(friends);
-    for (var question in friends) {
-      var friendDiff = Math.abs(totalScore - friends[question].totalScore);
+    for (var answers in friends) {
+      var friendDiff = Math.abs(totalScore - friends[answers].totalScore);
       if (friendDiff < 5) {
-        var friend = {name: friends[question].name, photo: friends[question].photo};
+        var friend = {name: friends[answers].name, photo: friends[answers].photo};
         friendArray.push(friend);
                 console.log(friend);
       }
