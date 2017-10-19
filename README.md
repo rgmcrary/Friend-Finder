@@ -8,4 +8,6 @@ This full-stack site takes in results from the users' surveys, and then compare 
 - HTML5
 - CSS
 - Bootstrap
+- JavaSript
+- JavaScript libraries
 - Express.js
